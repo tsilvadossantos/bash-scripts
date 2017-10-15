@@ -1,6 +1,6 @@
 # Backup and Encrypt script
 
-Contains a few used bash scripts in order to automate and build processes.
+Contains two bash scripts in order to backup and encrypt specified files.
 
 The project was develop using the following:
 
