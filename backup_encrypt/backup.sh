@@ -57,11 +57,10 @@ check_archive_dst() {
 #====================  Verify Parameter isValid ===============================
 check_file_exist() {
 #check if file passed through cli parameter exists
-  for i in "$@"
+  for file in "$@"
   do
-    if [ ! -e "$i" ] && [ $i -ne "--compress"]
-    then
-      printf "\n $i ERROR: File not found or does not exist! \n"
+    if [ ! -e "$file" ]; then
+      printf "\n $file ERROR: File not found or does not exist! \n"
       exit 1
     fi
   done
@@ -122,7 +121,7 @@ case "$1" in
             ;;
         "--encrypt")
             archive_files $cliListFiles
-            printf "INFO: Encrypted $fileArchiveName.enc by calling ./encrypt.sh\n"
+            printf "INFO: Encrypted $fileArchiveName.enc by calling Task4 (./encrypt.sh)\n"
             bash encrypt.sh $fileArchiveName
             ;;
 esac
